@@ -8,6 +8,7 @@ class TxtProcessor {
   }
 
   /*
+   * PRUEBA de DANY haciendo un Push en otra rama.
    * #3. Se está probando una nueva letra? está en la lista de intentos?
    * Si la letra no está en [a-z] o [A-Z] será falso.
    * No es sensitivo a mayúsculas y minúsculas, la 'a' y la 'A' son igual.
