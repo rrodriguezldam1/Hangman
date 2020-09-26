@@ -18,11 +18,11 @@ class TxtProcessor {
     int z = letter.compareTo("z");
     int A = letter.compareTo("A");
     int Z = letter.compareTo("Z");
-    if (( a > 0 ) && ( z < 0  ) ||(( A > 0 ) && (Z < 0))){
+    if (( a > 0 ) && ( z < 0  )||(( A > 0 ) && (Z < 0))){
       return false;
     }     
     
-    if (letter.indexOf(letter)== -1) {
+    if (letterTrialList.indexOf(letter)== -1) {
       return false;
       }
     else {
