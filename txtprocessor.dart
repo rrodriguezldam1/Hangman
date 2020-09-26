@@ -14,14 +14,22 @@ class TxtProcessor {
    * No es sensitivo a mayúsculas y minúsculas, la 'a' y la 'A' son igual.
    */
   static bool isNewLetterInList(String letter, List<String> letterTrialList) {
-    return true; // stub
+    if (letterTrialList.lastIndexOf(letter) == -1) {
+      return false;
+    } else {
+      return true;
+    }
+    // stub
   }
 
   /*
    * #4. Comprobar si una letra está en una palabra.
    */
   static bool isLetterInWord(String letter, String word) {
-    return false; // stub
+      return true; // stub
+    
+    }
+   
   }
 
   /*
