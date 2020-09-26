@@ -14,10 +14,28 @@ class TxtProcessor {
    * No es sensitivo a mayúsculas y minúsculas, la 'a' y la 'A' son igual.
    */
   static bool isNewLetterInList(String letter, List<String> letterTrialList) {
-    if (letterTrialList.lastIndexOf(letter) == -1) {
+    int a = letter.compareTo("a");
+    int z = letter.compareTo("z");
+    int A = letter.compareTo("A");
+    int Z = letter.compareTo("Z");
+    if ( a < 0 ) {
+      return false; 
+      }
+    if ( z > 0 ) {
       return false;
-    } else {
-      return true;
+      }
+     if ( A < 0 ) {
+      return false;       
+      }
+    if ( Z > 0 ) {
+      return false;       
+      }  
+    if (letter.indexOf(letter)== -1) {
+      return false;
+      }
+    else {
+        return true;
+      }
     }
     // stub
   }
