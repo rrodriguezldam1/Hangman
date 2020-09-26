@@ -32,7 +32,15 @@ class TxtProcessor {
    * devolverá "b u _ _ s e _ e"
    */
   static String guessedLetters(String keyword, List<String> letterTrialList) {
-    return "b u _ _ s e _ e"; // stub
+    var string = "";
+    for (int i = 0; i < letterTrialList.length; i++)
+      if (keyword.contains(letterTrialList[i])) {
+        string = "$letterTrialList";
+      } else {
+        letterTrialList[i] = "_";
+        string = "$letterTrialList";
+      }
+    return string; // stub
   }
 
   /*
