@@ -62,21 +62,3 @@ class TxtProcessor {
     return missedLetters;
   }
 }
-
-//void main() {
-//  String a = "@";
-// List<String> lista = new List(4);
-//  lista.add("a");
-//  lista.add("b");
-// lista.add("c");
-// lista.add("d");
-// print("esto funciona?");
-// print(lista);
-// if (TxtProcessor.isNewLetterInList(a, lista) == true) {
-//   var resul = "esta en el rango";
-//   print(resul);
-// } else {
-//   var resul = "esta fuera del rango";
-//   print(resul);
-// }
-//}
