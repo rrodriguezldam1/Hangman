@@ -13,7 +13,7 @@ class Input {
     stdout.write("Letra: ");
     int c = stdin.readByteSync(); // 10=Enter, 27=Esc
     String s = String.fromCharCode(c);
-    if (!isAletter(s)) {
+    if (isAletter(s) == false) {
       s = "@";
     }
 
