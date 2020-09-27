@@ -44,7 +44,7 @@ class Game {
    * para que salga del game loop.
    */
   void ganado() {
-    if (missedLetters == 0 || mistakeCounter < MAX_MISTAKES) {
+    if (missedLetters == 0 && mistakeCounter < MAX_MISTAKES) {
       gameStatus = Status.won;
       update_game();
     } else {
