@@ -11,6 +11,7 @@ class Dictionary {
   String makeRandomWord() {
     List<String> aleatorio = ["desesperado", "imposible", "desorientado", "enrevesado", "incoherente", "insatisfecho", "estresado", "contraseña", "agujero", "tunel", "espacio", "oscuro", "insaciable", "frío"];
     aleatorio.shuffle();
+    
     return aleatorio[0]; // @ionene
   }
 }
