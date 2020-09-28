@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'txtprocessor.dart';
 
 class Input {
   /*
@@ -13,7 +14,19 @@ class Input {
     stdout.write("Letra: ");
     int c = stdin.readByteSync(); // 10=Enter, 27=Esc
     String s = String.fromCharCode(c);
+    if (isAletter(s) == false) {
+      s = "@";
+    }
+
     print(s);
     return s;
+  }
+
+  static bool isAletter(String letter) {
+    int letra = letter.codeUnitAt(0);
+    if ((letra < 65) || (letra > 122) || ((letra > 90) && (letra < 97))) {
+      return false;
+    }
+    return true;
   }
 }
