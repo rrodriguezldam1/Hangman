@@ -8,19 +8,31 @@ class TxtProcessor {
   }
 
   /*
+   * PRUEBA de DANY haciendo un Push en otra rama.
    * #3. Se está probando una nueva letra? está en la lista de intentos?
    * Si la letra no está en [a-z] o [A-Z] será falso.
    * No es sensitivo a mayúsculas y minúsculas, la 'a' y la 'A' son igual.
    */
   static bool isNewLetterInList(String letter, List<String> letterTrialList) {
-    return true; // stub
+    int letra = letter.codeUnitAt(0);
+    if ((letra < 65) || (letra > 122) || ((letra > 90) && (letra < 97))) {
+      return false;
+    }
+
+    if (letterTrialList.indexOf(letter) == -1) {
+      return false;
+    }
+
+    return true;
   }
+
+  // stub
 
   /*
    * #4. Comprobar si una letra está en una palabra.
    */
   static bool isLetterInWord(String letter, String word) {
-    return false; // stub
+    return true; // stub
   }
 
   /*
@@ -32,7 +44,14 @@ class TxtProcessor {
    * devolverá "b u _ _ s e _ e"
    */
   static String guessedLetters(String keyword, List<String> letterTrialList) {
-    return "b u _ _ s e _ e"; // stub
+    String barraBaja = "_";
+    for (int i = 0; i < keyword.length; i++) {
+      if (letterTrialList.contains(keyword[i])) {
+        print(keyword[i]);
+      } else {
+        print(barraBaja);
+      }
+    }
   }
 
   /*
@@ -48,6 +67,7 @@ class TxtProcessor {
       if (!letterTrialList.contains(keyword[i]){
         missedLetters += letterTrialList[i] + "";
       }
+
     }
     return missedLetters;
   }
