@@ -21,6 +21,7 @@ class TxtProcessor {
    */
   static bool isLetterInWord(String letter, String word) {
     int i = 0;
+    
     for(i=0;i<word.length;i++){
         if((word[i] == letter) != false){
           return true;
